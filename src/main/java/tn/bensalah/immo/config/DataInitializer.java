@@ -243,7 +243,7 @@ public class DataInitializer implements CommandLineRunner {
         // Admin
         if (!userRepository.existsByEmail("admin@bensalahimmo.tn")) {
             User admin = User.builder()
-                    .email("admin@bensalahimmo.tn")
+                    .email("zouhair")
                     .password(passwordEncoder.encode("admin123"))
                     .nom("Ben Salah")
                     .prenom("Admin")
