@@ -37,6 +37,7 @@ public class SecurityConfig {
             .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
             	    .requestMatchers("/h2-console/**").permitAll()
+            	    .requestMatchers("/health").permitAll()  // ← ajoute cette ligne
             	    .requestMatchers("/api/auth/**").permitAll()
             	    .requestMatchers(HttpMethod.GET, "/api/biens").permitAll()
             	    .requestMatchers(HttpMethod.GET, "/api/biens/**").permitAll()
