@@ -15,7 +15,7 @@ public class HealthController {
         return ResponseEntity.ok("OK");
     }
 
-    @Scheduled(fixedRate = 300000) // toutes les 10 minutes
+    @Scheduled(fixedRate = 60000) // toutes les 1 minutes
     public void keepAlive() {
         try {
             new RestTemplate().getForObject(
